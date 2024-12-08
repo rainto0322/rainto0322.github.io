@@ -22,6 +22,7 @@ class Memo {
     return document.createElement(e)
   }
 
+
   async init() {
     const main = `<div id="memo-cont"></div><div id="memo-more" style="text-align:center;padding:2em"></div>`
     this.el.innerHTML = main
