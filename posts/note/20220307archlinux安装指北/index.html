@@ -1,0 +1,119 @@
+<!doctype html><html lang=zh-CN dir=ltr><head><meta chart=utf-8><meta name=viewport content="width=device-width"><title>Archlinux安装指北 | 雨巷</title>
+<link rel="shortcut icon" href=/favicon.svg type=image/svg-xml><meta name=language content="zh-CN"><meta property="og:title" content="Archlinux安装指北 | 雨巷"><meta name=twitter:title content="Archlinux安装指北 | 雨巷"><meta itemprop=name content="Archlinux安装指北 | 雨巷"><meta name=application-name content="Archlinux安装指北 | 雨巷"><meta property="og:site_name" content="雨巷"><meta property="og:locale" content="zh-CN"><meta name=description content="March 7, 2022  在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘"><meta itemprop=description content="March 7, 2022  在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘"><meta property="og:description" content="March 7, 2022  在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘"><meta name=twitter:description content="March 7, 2022  在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘"><meta itemprop=image content="https://rainto.top/img/mydwm.gif"><meta property="og:image" content="https://rainto.top/img/mydwm.gif"><meta name=twitter:image content="https://rainto.top/img/mydwm.gif"><meta name=twitter:image:src content="https://rainto.top/img/mydwm.gif"><meta property="og:type" content="article"><meta property="og:article:published_time" content=2022-03-07T08:00:00-0700><meta property="article:published_time" content=2022-03-07T08:00:00-0700><meta property="og:url" content="https://rainto.top/posts/note/20220307archlinux%E5%AE%89%E8%A3%85%E6%8C%87%E5%8C%97/"><meta property="og:article:author" content="Rainto"><meta property="article:author" content="Rainto"><meta name=author content="Rainto"><meta name=news_keywords content="[Archlinux]"><meta property="article:section" content="[Archlinux]"><link rel=stylesheet href=/css/main.min.css integrity crossorigin=anonymous><script src=/js/main.df02158b873b11f744b8dbc4151706f26672c0ec6dff13b890f46b2dbc13d1a0.js integrity="sha256-3wIVi4c7EfdEuNvEFRcG8mZywOxt/xO4kPRrLbwT0aA=" crossorigin=anonymous></script></head><body><header><h1 class=title><a href=/posts/note/20220307archlinux%E5%AE%89%E8%A3%85%E6%8C%87%E5%8C%97/>雨巷 <span style=font-size:.8em>(rainto.top)</span></a></h1><nav><p><a href=/>首頁</a>
+<a aria-current=true class=ancestor href=/posts/>归档</a>
+<a href=/tags/>标签</a>
+<a href=/memo/>碎语</a>
+<a href=/search/>搜索</a>
+<a href=/about/>关于</a></p></nav></header><main><div class=banner><img src=../img/mydwm.gif alt=Archlinux安装指北></div><h1>Archlinux安装指北</h1><div><span></span><a href=/categories/%E7%AC%94%E8%AE%B0>笔记</a>&nbsp;/&nbsp;</span>
+<time datetime=2022-03-07T08:00:00-07:00>March 7, 2022</time></div><div><blockquote><p>在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘巧合下，看到up主theCW的视频，用的是dwm。自动平铺，键盘流，受此诱惑就成为了众多arch教徒之一。本教程仅适合自己，更多详细请查阅 <a href=https://arch.icekylin.online/>✨archlinux简明指南</a></p></blockquote><h1 id=连接网络>连接网络</h1><div id=hl-0 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># 进入交互式命令行</span>
+</span></span><span style=display:flex><span>iwctl
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 列出无线网卡设备名，比如无线网卡看到叫 wlan0</span>
+</span></span><span style=display:flex><span>device list
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 扫描网络 | 列出所有 wifi 网络</span>
+</span></span><span style=display:flex><span>station wlan0 scan
+</span></span><span style=display:flex><span>station wlan0 get-networks
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 进行连接，注意这里无法输入中文。回车后输入密码即可进行连接，注意这里无法输入中文。回车后输入密码即可</span>
+</span></span><span style=display:flex><span>station wlan0 connect wifi-name
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#fabd2f>exit</span> <span style=color:#928374;font-style:italic># 连接成功后退出</span></span></span></code></pre></div><blockquote><p>如果无线网卡无法显示</p></blockquote><div id=hl-1 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># 查看内核是否加载了你的无线网卡驱动</span>
+</span></span><span style=display:flex><span>lspci -k | grep Nerwork
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 查看无线连接 是否被禁用(blocked: yes)</span>
+</span></span><span style=display:flex><span>rfkill list
+</span></span><span style=display:flex><span>rfkill unblock wlan0 <span style=color:#928374;font-style:italic># 软解网卡</span>
+</span></span><span style=display:flex><span>ip link <span style=color:#fabd2f>set</span> wlan0 up <span style=color:#928374;font-style:italic>#启动网卡</span></span></span></code></pre></div><h1 id=硬盘分区--挂载>硬盘分区 + 挂载</h1><blockquote><p>🙋做好备份，谨慎输入！！！</p></blockquote><div id=hl-2 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>fdisk -l <span style=color:#928374;font-style:italic># 列出设备</span>
+</span></span><span style=display:flex><span>fdisk /dev/&lt;设备名&gt; <span style=color:#928374;font-style:italic># 选中硬盘 （如果）</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># n 新建</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># p 列出</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># d 移除</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># w 写入</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># q 退出</span></span></span></code></pre></div><p>按照提示操作即可，分区配置大致如下</p><ul><li><code>sda1</code> ———— <code>/boot</code> <code>efi</code>分区可跟<code>windows</code>共用</li><li><code>sda2</code> ———— <code>/</code> 根目录<code>>=128gb</code></li><li><code>sda1</code> ———— swap分区 <code>>=电脑实际运行内存的60%</code></li></ul><h1 id=格式化分区>格式化分区</h1><div id=hl-3 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># 如果已有window系统，则不需要，否则会把widnow的启动项删掉</span>
+</span></span><span style=display:flex><span>mkfs.fat -F32 /dev/sda1
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 也可以选择ext4</span>
+</span></span><span style=display:flex><span>mkfs.btrfs /dev/sda2
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># swap</span>
+</span></span><span style=display:flex><span>mkfswap /dev/sda3</span></span></code></pre></div><h1 id=挂载分区>挂载分区</h1><blockquote><p>挂载是有顺序的，需要从根目录开始挂载。</p></blockquote><div id=hl-4 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>mount -t btrfs -o subvol<span style=color:#fe8019>=</span>/@,compress<span style=color:#fe8019>=</span>zstd /dev/sda2 /mnt
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 创建 /home 目录 | 挂载</span>
+</span></span><span style=display:flex><span>mkdir /mnt/home
+</span></span><span style=display:flex><span>mount -t btrfs -o subvol<span style=color:#fe8019>=</span>/@home,compress<span style=color:#fe8019>=</span>zstd /dev/sda2 /mnt/home
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 创建 /boot 目录 | 挂载</span>
+</span></span><span style=display:flex><span>mkdir -p /mnt/boot
+</span></span><span style=display:flex><span>mount /dev/sda1 /mnt/boot
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 挂载交换分区</span>
+</span></span><span style=display:flex><span>swapon /dev/sda3
+</span></span><span style=display:flex><span>df -h <span style=color:#928374;font-style:italic># 查看挂载情况</span>
+</span></span><span style=display:flex><span>free -h <span style=color:#928374;font-style:italic># Swap 分区挂载情况</span></span></span></code></pre></div><h1 id=开始安装>开始安装</h1><h2 id=更新系统时钟>更新系统时钟</h2><p>使用 <code>timedatectl</code> 确保系统时间是准确的。不是必须，但对于部分程序来说十分重要。</p><div id=hl-5 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># 将系统时间与网络时间进行同步</span>
+</span></span><span style=display:flex><span>timedatectl set-ntp <span style=color:#fabd2f>true</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 检查服务状态</span>
+</span></span><span style=display:flex><span>timedatectl status</span></span></code></pre></div><h2 id=推荐的镜像源如下>推荐的镜像源如下</h2><div id=hl-6 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># 中国科学技术大学开源镜像站</span>
+</span></span><span style=display:flex><span>Server <span style=color:#fe8019>=</span> https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 清华大学开源软件镜像站</span>
+</span></span><span style=display:flex><span>Server <span style=color:#fe8019>=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 华为开源镜像站</span>
+</span></span><span style=display:flex><span>Server <span style=color:#fe8019>=</span> https://repo.huaweicloud.com/archlinux/$repo/os/$arch
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 兰州大学开源镜像站</span>
+</span></span><span style=display:flex><span>Server <span style=color:#fe8019>=</span> http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch</span></span></code></pre></div><h2 id=更换国内软件仓库镜像源>更换国内软件仓库镜像源</h2><p>使用 <code>vim</code> 编辑器修改 <code>/etc/pacman.d</code> 按 <code>/</code> 输入 <code>mirritlist </code>找到 <code>/etc/pacman.d/mirrorlist</code> （回车后可以用大小写 n 键来上下搜索），按<code>g</code> + <code>d</code> 进入修改文件。将 <code>pacman</code> 软件仓库源更换为国内软件仓库镜像源。</p><div id=hl-7 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>vim /etc/pacman.d/mirrorlist</span></span></code></pre></div><h1 id=安装系统>安装系统</h1><h2 id=安装基础内核>安装基础内核</h2><div id=hl-8 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>pacstrap /mnt base base-devel linux linux-firmware btrfs-progs
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 如果使用btrfs文件系统，额外安装一个 `btrfs-progs` 包</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 如果提示 GPG证书错误，可能是因为使用的不是最新的镜像，可以通过更新 archlinux-keyring 解决。</span>
+</span></span><span style=display:flex><span>pacman -S archlinux-keyring</span></span></code></pre></div><h2 id=生成fstab文件>生成fstab文件</h2><div id=hl-9 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>genfstab -U /mnt &gt; /mnt/etc/fstab</span></span></code></pre></div><h2 id=切换到新系统下-安装其他功能性软件>切换到新系统下 安装其他功能性软件</h2><div id=hl-10 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>arch-chroot /mnt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 网络管理 很重要，否则开机没网</span>
+</span></span><span style=display:flex><span>pacman -S networkmanager dhcpcd
+</span></span><span style=display:flex><span>systemctl <span style=color:#fabd2f>enable</span> NetworkManager
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># vim 编辑器以及 sudo 权限管理器</span>
+</span></span><span style=display:flex><span>pacman -S vim sudo
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 芯片制造商的微码</span>
+</span></span><span style=display:flex><span>pacman -S intel-ucode <span style=color:#928374;font-style:italic># Intel</span>
+</span></span><span style=display:flex><span>pacman -S amd-ucode <span style=color:#928374;font-style:italic># AMD</span></span></span></code></pre></div><h2 id=设置主机名与时区>设置主机名与时区</h2><div id=hl-11 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span><span style=color:#928374;font-style:italic># i 键入你想要等等主机名，:wq 保存</span>
+</span></span><span style=display:flex><span>vim /etc/hostname
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 加入以下内容</span>
+</span></span><span style=display:flex><span>vim /etc/hosts
+</span></span><span style=display:flex><span>127.0.0.1 localhost
+</span></span><span style=display:flex><span>::1 localhost
+</span></span><span style=display:flex><span>127.0.1.1 myarch.localdomain myarch
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 设置时区 （ps： 没有北京）</span>
+</span></span><span style=display:flex><span>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</span></span><span style=display:flex><span>hwclock --systohc <span style=color:#928374;font-style:italic># 把系统时间同步到硬件时间</span></span></span></code></pre></div><h2 id=设置用户>设置用户</h2><div id=hl-12 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>passwd root <span style=color:#928374;font-style:italic># 给root创建密码</span>
+</span></span><span style=display:flex><span>useradd -m -G wheel -s /bin/bash &lt;username&gt;
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># -m 创建主目录</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># -G 将用户添加到另一个组</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># -s 指定默认登陆使用的shell</span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic>## wheel 组是一种特殊类型的组，用于控制谁可以访问sudo命令</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 配置访问权限</span>
+</span></span><span style=display:flex><span>vim /etc/sudoers
+</span></span><span style=display:flex><span>%wheel ALL<span style=color:#fe8019>=(</span>ALL<span style=color:#fe8019>)</span> ALL <span style=color:#928374;font-style:italic># 取消注释</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 切换到新用户</span>
+</span></span><span style=display:flex><span>su &lt;username&gt;</span></span></code></pre></div><h1 id=grub引导双系统>grub引导双系统</h1><div id=hl-13 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>arch-chroot /mnt
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 设置等待时间，主题</span>
+</span></span><span style=display:flex><span>vim /etc/default/grub
+</span></span><span style=display:flex><span>grub-install --target<span style=color:#fe8019>=</span>x86_64-efi --efi-directory<span style=color:#fe8019>=</span>/bootgrub-mkconfig &gt; /boot/grub/grub.cfg</span></span></code></pre></div><h2 id=配置archlinuxcn>配置archlinuxcn</h2><div id=hl-14 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>vim /etc/pacman.conf
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 取消注释</span>
+</span></span><span style=display:flex><span><span style=color:#fe8019>[</span>multilib<span style=color:#fe8019>]</span>Include <span style=color:#fe8019>=</span> /etc/pacman.d/mirrorlist
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 尾部添加</span>
+</span></span><span style=display:flex><span><span style=color:#fe8019>[</span>archlinuxcn<span style=color:#fe8019>]</span>
+</span></span><span style=display:flex><span>SigLevel <span style=color:#fe8019>=</span> Never
+</span></span><span style=display:flex><span>Server <span style=color:#fe8019>=</span> https://mirrors.ustc.edu.cn/$repo/$arch
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 安装yay</span>
+</span></span><span style=display:flex><span>sudo pacman -Syyu
+</span></span><span style=display:flex><span>sudo pacman -S yay</span></span></code></pre></div><h1 id=日用配置及软件安装>日用配置及软件安装</h1><div id=hl-15 class=hl><div class=meta><div style=color:#928374><span class=type>shell</span></div><div class=wrap onclick=wrap(this)></div><div class=copy onclick=copy(this)></div></div><pre><code class=code><span style=display:flex><span>
+</span></span><span style=display:flex><span>pacman -s nerd-fonts-jetbrains-mono otf-comicshanns-nerd wqy-microhei
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>git clone https://github.com/lorre0322/dwm
+</span></span><span style=display:flex><span>git clone https://github.com/lorre0322/st
+</span></span><span style=display:flex><span><span style=color:#fabd2f>cd</span> dwm &amp; sudo make clean install
+</span></span><span style=display:flex><span><span style=color:#fabd2f>cd</span> st &amp; sudo make clean install
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cp /etc/X11/xinit/xinitrc ~/.xinitrc
+</span></span><span style=display:flex><span>vim .xinitrc
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 把最后几行删了添加进去</span>
+</span></span><span style=display:flex><span><span style=color:#fabd2f>export</span> DWM<span style=color:#fe8019>=</span>~/Desktop/dwm
+</span></span><span style=display:flex><span>mpd &amp;
+</span></span><span style=display:flex><span><span style=color:#fabd2f>exec</span> dwm
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#928374;font-style:italic># 登陆后自动startx</span>
+</span></span><span style=display:flex><span><span style=color:#fe8019>[</span> <span style=color:#fe8019>$(</span>tty<span style=color:#fe8019>)</span> <span style=color:#fe8019>=</span> <span style=color:#b8bb26>&#34;/dev/tty1&#34;</span> <span style=color:#fe8019>]</span> <span style=color:#fe8019>&amp;&amp;</span> <span style=color:#fabd2f>cd</span> ~ <span style=color:#fe8019>&amp;&amp;</span> startx</span></span></code></pre></div></div><div><ul class=tags><li><span class=anchor>#</span><a href=/tags/archlinux/>Archlinux</a></li></ul></div><div class=paginav><div class=prev><a href=/posts/movie/20220206%E6%B5%81%E6%B5%AA%E8%80%85%E4%B9%8B%E6%AD%8C/><div class=title>« Prev</div><span>流浪者之歌</span></a></div><div class=next><a href=/posts/movie/20220329%E5%9C%B0%E7%90%83%E6%9C%80%E5%90%8E%E7%9A%84%E5%A4%9C%E6%99%9A/><div class=title>Next »</div><span>地球最后的夜晚</span></a></div></div><style>.hl{background-color:var(--code);margin-block:1em;border-radius:10px;position:relative;overflow:auto;padding-bottom:15px}.hl .meta{user-select:none;display:flex;justify-content:space-between;padding:15px 15px 0;position:sticky;left:0;align-items:center}.hl .type{text-transform:uppercase}.hl .wrap,.hl .copy{width:12px;height:12px;background:#5f5970;border-radius:50%;transition:background .5s}.hl .wrap{margin-inline:auto 10px}.hl pre{display:grid}.hl .code{margin-block:15px;font-size:.9rem;tab-size:2;display:block}</style><script>function copy(e){const n=e.parentNode.parentNode.querySelector("code"),t=window.getSelection();t.selectAllChildren(n),document.execCommand("copy"),t.removeAllRanges(),e.style.background="#edb23b",setTimeout(()=>{e.style.background="#5f5970"},1e3)}function wrap(e){const t=e.parentNode.parentNode,n=t.querySelector("code"),s=t.querySelector("pre");let o=null;if(s)o=n,t.removeChild(s),t.appendChild(o);else{const e=document.createElement("pre");e.style.display="grid",e.appendChild(n),t.appendChild(e)}}</script></main><footer><a href=#>返回顶部 ↑</a><p>©&nbsp;2025&nbsp;雨巷 | <a href=https://github.com/rainto0322/hugo-theme-rain target=_blank rel="noopener noreferrer">RAIN</a> THEME</p></footer></body></html>

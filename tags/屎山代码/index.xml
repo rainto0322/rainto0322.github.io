@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>屎山代码 on 雨巷</title><link>https://rainto.top/tags/%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/</link><description>Recent content in 屎山代码 on 雨巷</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 06 Oct 2023 22:09:00 -0700</lastBuildDate><atom:link href="https://rainto.top/tags/%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>屎山代码风格指南</title><link>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link><pubDate>Fri, 06 Oct 2023 22:09:00 -0700</pubDate><guid>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid><description>&lt;p>&lt;a href="https://github.com/trekhleb/state-of-the-art-shitcode">&lt;img src="https://img.shields.io/static/v1?label=State-of-the-art&amp;amp;message=Shitcode&amp;amp;color=7B5804" alt="State-of-the-art Shitcode">&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;h4 id="-以下不要尝试学习不要写给出这些建议就是避免这样写不听的话下周就是你提桶跑路的日子划重点good-">✋ 以下不要尝试学习，&lt;code>不要写&lt;/code>！给出这些建议就是避免这样写，不听的话，下周就是你提桶跑路的日子（划重点）Good 👍🏻&lt;/h4>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>良好的代码结构：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>使用&lt;code>有意义的变量和函数名&lt;/code>，遵循命名规范，使代码易于理解。&lt;/li>
+&lt;li>组织代码，使用适当的文件和文件夹结构，保持模块化。&lt;/li>
+&lt;li>避免全局变量的滥用，&lt;code>尽量使用局部作用域&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>单一职责原则：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>每个函数或模块应该只负责一个特定的功能。这样的设计使得代码更容易维护和扩展。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>DRY 原则（不要重复自己）：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>避免复制粘贴代码，尽量将重复的逻辑提取成函数、类或模块。
+使用函数封装通用功能，以便在整个应用程序中重复使用。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>注释和文档：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>写&lt;code>清晰&lt;/code>、&lt;code>有意义&lt;/code>的注释，解释代码的目的和特殊考虑。&lt;/li>
+&lt;li>为 API、函数等提供&lt;code>良好的文档&lt;/code>，使其他开发者能够轻松理解和使用你的代码。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>代码复审：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>进行代码复审是避免屎山代码的重要步骤。同事可以提供不同的视角和建议，有助于发现潜在的问题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>测试驱动开发（TDD）：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>使用测试来确保代码的质量和稳定性。在编写代码之前先写测试，以确保代码的正确性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>使用设计模式：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>学习并应用设计模式，它们提供了一些通用的解决方案，有助于降低复杂性和提高代码的可维护性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>版本控制：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>使用&lt;code>版本控制&lt;/code>系统（如 Git）来跟踪代码的变化，以便轻松地回滚到之前的版本，并且能够合理管理多人协作的情况。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>性能优化和代码优化：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>注意&lt;code>代码的性能&lt;/code>，避免写出低效的代码。使用工具和技术进行性能分析和优化。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>学习和持续改进：&lt;code>Bad!👎🏻&lt;/code>
+&lt;ul>
+&lt;li>不断学习新的技术和最佳实践，关注前端领域的最新发展。&lt;/li>
+&lt;li>&lt;code>定期检讨&lt;/code>自己的代码，寻找优化的机会，并从他人的经验中吸取教训。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;blockquote>
+&lt;h3 id="以下是我精心准备的福利大礼包-good">以下是我精心准备的福利大礼包 &lt;code>Good!👍🏻&lt;/code>&lt;/h3>
+&lt;/blockquote>
+&lt;h3 id="通用jscsshtml系列">通用js,css,html系列&lt;/h3>
+&lt;ol>
+&lt;li>混淆方式命名变量&lt;/li>
+&lt;/ol>
+
+&lt;div id="hl-0" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">js&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// Bad 👎🏻（不要参考）
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">const&lt;/span> age &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#d3869b">18&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// Good 👍🏻（谨记）
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// 这是个啥？猜去吧！没用的，只有我才知道！
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">const&lt;/span> a &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#b8bb26">&amp;#34;&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;ol start="2">
+&lt;li>不要注释！不要注释！不要注释！&lt;/li>
+&lt;/ol>
+
+&lt;div id="hl-1" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">js&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// Bad 👎🏻（不要参考）
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// 400的数量是根据UX A/B测试结果进行计算的。
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// @查看: &amp;lt;详细解释的一个链接&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">const&lt;/span> callbackCode &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#d3869b">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// Good 👍🏻（谨记）
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">const&lt;/span> cbc &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#d3869b">400&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;ol start="3">
+&lt;li>非母语注释&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>如果你手贱，确实想写注释，你已经违背了&lt;code>规则2&lt;/code>,在这种情况下，&lt;code>规则3&lt;/code>一定要遵守，写注释用非母语，提升别人看注释的门槛，例如：你的母语是中文，你写注释就用法语或者俄语。有人可能会问，我不会怎么办？善用翻译！&lt;/p></description></item></channel></rss>

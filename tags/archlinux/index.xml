@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Archlinux on 雨巷</title><link>https://rainto.top/tags/archlinux/</link><description>Recent content in Archlinux on 雨巷</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Mar 2022 08:00:00 -0700</lastBuildDate><atom:link href="https://rainto.top/tags/archlinux/index.xml" rel="self" type="application/rss+xml"/><item><title>Archlinux安装指北</title><link>https://rainto.top/posts/note/20220307archlinux%E5%AE%89%E8%A3%85%E6%8C%87%E5%8C%97/</link><pubDate>Mon, 07 Mar 2022 08:00:00 -0700</pubDate><guid>https://rainto.top/posts/note/20220307archlinux%E5%AE%89%E8%A3%85%E6%8C%87%E5%8C%97/</guid><description>&lt;blockquote>
+&lt;p>在window 11更新后，偶尔的卡顿，动画的掉帧，💩 般的界面，繁琐的操作都令我痛苦不堪。在机缘巧合下，看到up主theCW的视频，用的是dwm。自动平铺，键盘流，受此诱惑就成为了众多arch教徒之一。本教程仅适合自己，更多详细请查阅 &lt;a href="https://arch.icekylin.online/">✨archlinux简明指南&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="连接网络">连接网络&lt;/h1>
+
+&lt;div id="hl-0" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">shell&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 进入交互式命令行&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iwctl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 列出无线网卡设备名，比如无线网卡看到叫 wlan0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>device list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 扫描网络 | 列出所有 wifi 网络&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>station wlan0 scan
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>station wlan0 get-networks
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 进行连接，注意这里无法输入中文。回车后输入密码即可进行连接，注意这里无法输入中文。回车后输入密码即可&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>station wlan0 connect wifi-name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fabd2f">exit&lt;/span> &lt;span style="color:#928374;font-style:italic"># 连接成功后退出&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;blockquote>
+&lt;p>如果无线网卡无法显示&lt;/p>
+&lt;/blockquote>
+
+&lt;div id="hl-1" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">shell&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 查看内核是否加载了你的无线网卡驱动&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lspci -k | grep Nerwork
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># 查看无线连接 是否被禁用(blocked: yes)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rfkill list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rfkill unblock wlan0 &lt;span style="color:#928374;font-style:italic"># 软解网卡&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ip link &lt;span style="color:#fabd2f">set&lt;/span> wlan0 up &lt;span style="color:#928374;font-style:italic">#启动网卡&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h1 id="硬盘分区--挂载">硬盘分区 + 挂载&lt;/h1>
+&lt;blockquote>
+&lt;p>🙋做好备份，谨慎输入！！！&lt;/p>
+&lt;/blockquote>
+
+&lt;div id="hl-2" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">shell&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>fdisk -l &lt;span style="color:#928374;font-style:italic"># 列出设备&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fdisk /dev/&amp;lt;设备名&amp;gt; &lt;span style="color:#928374;font-style:italic"># 选中硬盘 （如果）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># n 新建&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># p 列出&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># d 移除&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># w 写入&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic"># q 退出&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>按照提示操作即可，分区配置大致如下&lt;/p></description></item></channel></rss>
