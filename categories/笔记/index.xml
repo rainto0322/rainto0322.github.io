@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on 雨巷</title><link>https://rainto.top/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on 雨巷</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 06 Oct 2023 22:09:00 -0700</lastBuildDate><atom:link href="https://rainto.top/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>屎山代码风格指南</title><link>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link><pubDate>Fri, 06 Oct 2023 22:09:00 -0700</pubDate><guid>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid><description>&lt;p>&lt;a href="https://github.com/trekhleb/state-of-the-art-shitcode">&lt;img src="https://img.shields.io/static/v1?label=State-of-the-art&amp;amp;message=Shitcode&amp;amp;color=7B5804" alt="State-of-the-art Shitcode">&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on 雨巷</title><link>https://rainto.top/categories/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on 雨巷</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 11 Apr 2025 22:09:00 -0700</lastBuildDate><atom:link href="https://rainto.top/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>JavaScript异步新写法</title><link>https://rainto.top/posts/note/20250411js%E5%BC%82%E6%AD%A5%E6%96%B0%E5%86%99%E6%B3%95/</link><pubDate>Fri, 11 Apr 2025 22:09:00 -0700</pubDate><guid>https://rainto.top/posts/note/20250411js%E5%BC%82%E6%AD%A5%E6%96%B0%E5%86%99%E6%B3%95/</guid><description>&lt;blockquote>
+&lt;p>async/await的性能瓶颈
+async/await虽然优雅，但它实际上是基于Promise和生成器函数的语法糖。每次使用await关键字时，JavaScript引擎都会创建一个暂停点，保存当前执行上下文，并在异步操作完成后恢复执行。这个过程涉及到上下文切换和状态管理，在高频调用或计算密集型应用中可能导致显著的性能开销。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="传统的asyncawait用法">传统的async/await用法&lt;/h1>
+
+&lt;div id="hl-0" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">js&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fe8019">async&lt;/span> &lt;span style="color:#fe8019">function&lt;/span> fetchData() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> result &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#fe8019">await&lt;/span> fetch(&lt;span style="color:#b8bb26">&amp;#39;https://api.example.com/data&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> data &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#fe8019">await&lt;/span> result.json();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> data;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h1 id="新一代异步处理方法">新一代异步处理方法&lt;/h1>
+&lt;h2 id="1-promise链式优化">1. Promise链式优化&lt;/h2>
+&lt;blockquote>
+&lt;p>避免不必要的await,改用promise链式调用可以减少上下文切换。这种写法避免了两次await的上下文切换，在高频调用场景下性能提升显著。&lt;/p>
+&lt;/blockquote>
+
+&lt;div id="hl-1" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">js&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fe8019">function&lt;/span> fetchData() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> fetch(&lt;span style="color:#b8bb26">&amp;#39;https://api.example.com/data&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .then(response =&amp;gt; response.json())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h2 id="2-并行执行-promiseall">2. 并行执行 Promise.all&lt;/h2>
+&lt;blockquote>
+&lt;p>当多个异步操作之间没有依赖关系时，使用Promise.all可以并行执行它们。并行执行可以将总执行时间从三个操作的总和减少到最长操作的时间。&lt;/p>
+&lt;/blockquote>
+
+&lt;div id="hl-2" class="hl">
+ &lt;div class="meta">
+ &lt;div style="color:#928374;">
+ 
+ &lt;span class="type">js&lt;/span>
+ &lt;/div>
+ &lt;div class="wrap" onclick="wrap(this)">&lt;/div>
+ &lt;div class="copy" onclick="copy(this)">&lt;/div>
+ &lt;/div>
+ &lt;pre>&lt;code class="code">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// 低效写法
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">async&lt;/span> &lt;span style="color:#fe8019">function&lt;/span> fetchMultipPaprallel() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> [result1, result2] &lt;span style="color:#fe8019">=&lt;/span> &lt;span style="color:#fe8019">await&lt;/span> &lt;span style="color:#fabd2f">Promise&lt;/span>.all([
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> data1 &lt;span style="color:#fe8019">=&lt;/span> fetch(&lt;span style="color:#b8bb26">&amp;#39;url1&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> data2 &lt;span style="color:#fe8019">=&lt;/span> fetch(&lt;span style="color:#b8bb26">&amp;#39;url2&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">const&lt;/span> data3 &lt;span style="color:#fe8019">=&lt;/span> fetch(&lt;span style="color:#b8bb26">&amp;#39;url3&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> [data1, data2, data3];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">// 高效写法
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#928374;font-style:italic">&lt;/span>&lt;span style="color:#fe8019">async&lt;/span> &lt;span style="color:#fe8019">function&lt;/span> fetchMultipPaprallel() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> &lt;span style="color:#fabd2f">Promise&lt;/span>.all([
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetchData(&lt;span style="color:#b8bb26">&amp;#39;url1&amp;#39;&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetchData(&lt;span style="color:#b8bb26">&amp;#39;url2&amp;#39;&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetchData(&lt;span style="color:#b8bb26">&amp;#39;url3&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;h2 id="3-promise批处理">3. Promise批处理&lt;/h2>
+&lt;blockquote>
+&lt;p>对于需要处理大量异步操作的场景，使用批处理而非await循环可以显著提高性能。&lt;/p></description></item><item><title>屎山代码风格指南</title><link>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link><pubDate>Fri, 06 Oct 2023 22:09:00 -0700</pubDate><guid>https://rainto.top/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid><description>&lt;p>&lt;a href="https://github.com/trekhleb/state-of-the-art-shitcode">&lt;img src="https://img.shields.io/static/v1?label=State-of-the-art&amp;amp;message=Shitcode&amp;amp;color=7B5804" alt="State-of-the-art Shitcode">&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;h4 id="-以下不要尝试学习不要写给出这些建议就是避免这样写不听的话下周就是你提桶跑路的日子划重点good-">✋ 以下不要尝试学习，&lt;code>不要写&lt;/code>！给出这些建议就是避免这样写，不听的话，下周就是你提桶跑路的日子（划重点）Good 👍🏻&lt;/h4>
 &lt;/blockquote>
