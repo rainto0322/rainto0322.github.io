@@ -30,7 +30,8 @@ class Memo {
   }
 
   async FD() {
-    const reply = await fetch(`${this.url}/memo/${this.cpage}/10`)
+    const reply = await fetch(`${this.url}/memo/li/${this.cpage}/10`)
+
     if (!reply.ok) {
       setTimeout(() => {
         this.el.innerHTML = "•︡ᯅ•︠ Unable connect to radio waves."
@@ -42,12 +43,13 @@ class Memo {
     const { data, max } = params
     const fragment = document.createDocumentFragment();
     for (const item of data) {
-      let { html, date } = item
+      let { text, img, date } = item
       const memoItem = this.cr('div')
+      let image = ''
+      if (img.length >= 1) image = `<img src="https://raw.gitcode.com/rainto/Album/raw/main/daily/${img[0]}.png">`
       memoItem.className = 'm-item'
-      const memoContent = `<div class="i-cont">${html}</div><div class="i-meta"><time datetime="${date}">${this.T(date)}</time></div>`
+      const memoContent = `<div class="i-cont">${image}${text}</div><div class="i-meta"><time datetime="${date}">${this.T(date)}</time></div>`
       memoItem.innerHTML = memoContent
-
       fragment.appendChild(memoItem)
     }
 
@@ -56,7 +58,7 @@ class Memo {
     if (this.cpage + 1 < max) {
       const loadMoreButton = this.cr('div');
       loadMoreButton.textContent = 'ʕ•ᴥ•ʔ Click me to load more.';
-      loadMoreButton.onclick=()=>{
+      loadMoreButton.onclick = () => {
         more.innerHTML = this.img
         this.loadMore()
       }
