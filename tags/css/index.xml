@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Css on 雨巷</title><link>http://localhost:4000/tags/css/</link><description>Recent content in Css on 雨巷</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Aug 2025 22:09:00 -0700</lastBuildDate><atom:link href="http://localhost:4000/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title>字体自适应宽度</title><link>http://localhost:4000/posts/note/20250811%E5%AD%97%E4%BD%93%E8%87%AA%E9%80%82%E5%BA%94%E5%AE%BD%E5%BA%A6/</link><pubDate>Mon, 11 Aug 2025 22:09:00 -0700</pubDate><guid>http://localhost:4000/posts/note/20250811%E5%AD%97%E4%BD%93%E8%87%AA%E9%80%82%E5%BA%94%E5%AE%BD%E5%BA%A6/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;最近逛css award发现一个挺有意思的方法实现字体自适应宽度,所以记录下。&lt;img src="https://whoisguilty.com/" alt="whoisguilty"&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;div id="hl-0" class="hl"&gt;
+ &lt;div class="meta"&gt;
+ &lt;div style="color:#928374;"&gt;
+ 
+ &lt;span class="type"&gt;css&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="wrap" onclick="wrap(this)"&gt;&lt;/div&gt;
+ &lt;div class="copy" onclick="copy(this)"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;:root {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --vw-screen: &lt;span style="color:#d3869b"&gt;1440&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@&lt;span style="color:#fe8019"&gt;media&lt;/span&gt; &lt;span style="color:#fe8019"&gt;(&lt;/span&gt;&lt;span style="color:#fb4934"&gt;max-width&lt;/span&gt;&lt;span style="color:#fe8019"&gt;:&lt;/span&gt; &lt;span style="color:#fb4934"&gt;1023px&lt;/span&gt;&lt;span style="color:#fe8019"&gt;)&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :root {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --vw-screen: &lt;span style="color:#d3869b"&gt;768&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@&lt;span style="color:#fe8019"&gt;media&lt;/span&gt; &lt;span style="color:#fe8019"&gt;(&lt;/span&gt;&lt;span style="color:#fb4934"&gt;max-width&lt;/span&gt;&lt;span style="color:#fe8019"&gt;:&lt;/span&gt; &lt;span style="color:#fb4934"&gt;767px&lt;/span&gt;&lt;span style="color:#fe8019"&gt;)&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :root {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --vw-screen: &lt;span style="color:#d3869b"&gt;375&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fb4934"&gt;html&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fe8019"&gt;font-size&lt;/span&gt;: &lt;span style="color:#fabd2f"&gt;calc&lt;/span&gt;(&lt;span style="color:#d3869b"&gt;16&lt;/span&gt; &lt;span style="color:#fe8019"&gt;/&lt;/span&gt; &lt;span style="color:#fabd2f"&gt;var&lt;/span&gt;(&lt;span style="color:#fe8019"&gt;--&lt;/span&gt;vw&lt;span style="color:#fe8019"&gt;-&lt;/span&gt;&lt;span style="color:#fe8019"&gt;screen&lt;/span&gt;) &lt;span style="color:#fe8019"&gt;*&lt;/span&gt; &lt;span style="color:#d3869b"&gt;100&lt;/span&gt; &lt;span style="color:#fe8019"&gt;*&lt;/span&gt; &lt;span style="color:#d3869b"&gt;1&lt;/span&gt;&lt;span style="color:#fabd2f"&gt;vw&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#fe8019"&gt;line-height&lt;/span&gt;: &lt;span style="color:#fabd2f"&gt;calc&lt;/span&gt;(&lt;span style="color:#d3869b"&gt;20&lt;/span&gt; &lt;span style="color:#fe8019"&gt;/&lt;/span&gt; &lt;span style="color:#fabd2f"&gt;var&lt;/span&gt;(&lt;span style="color:#fe8019"&gt;--&lt;/span&gt;vw&lt;span style="color:#fe8019"&gt;-&lt;/span&gt;&lt;span style="color:#fe8019"&gt;screen&lt;/span&gt;) &lt;span style="color:#fe8019"&gt;*&lt;/span&gt; &lt;span style="color:#d3869b"&gt;100&lt;/span&gt; &lt;span style="color:#fe8019"&gt;*&lt;/span&gt; &lt;span style="color:#d3869b"&gt;1&lt;/span&gt;&lt;span style="color:#fabd2f"&gt;vw&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description></item></channel></rss>
