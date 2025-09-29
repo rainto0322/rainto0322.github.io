@@ -802,18 +802,22 @@
 &lt;blockquote&gt;
 &lt;p&gt;在她醒来后，她会不会默默地感谢那点萤火，结束了她漫长的孤独。&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>关于我</title><link>https://rainto.top/about/</link><pubDate>Mar-22-1998</pubDate><guid>https://rainto.top/about/</guid><description>&lt;br/&gt;
 &lt;div style="display: flex;align-items: center;"&gt;
-&lt;img src="https://rainto.top/img/avantar.png" alt="rainto" style="width:50px;height:50px;display:inline-block;border-radius:50%;display:float;float:left;margin-right:15px;"&gt;
+&lt;img src="https://rainto.top/img/rain.png" alt="rainto" style="width:50px;height:50px;display:inline-block;border-radius:50%;display:float;float:left;margin-right:15px;"&gt;
 &lt;p&gt;我来自羊城广州你可以称呼我为&lt;code&gt;咩阿&lt;/code&gt;或者&lt;code&gt;Rainto&lt;/code&gt;。&lt;/p&gt;
 &lt;/div&gt;
+&lt;h3 id="头像"&gt;头像&lt;/h3&gt;
+&lt;p&gt;拍摄于我的小时候，长大后看到这张照片握起的拳头觉得很有力量，就沿用了。&lt;/p&gt;
 &lt;h3 id="我喜欢"&gt;我喜欢&lt;/h3&gt;
 &lt;p&gt;坐在电脑前闷头敲一天的代码、玩各种奇奇怪怪但有趣的独立游戏、爱看各种奇思妙想的有趣书籍、带着奥林巴斯走进街头巷尾观察人类。&lt;/p&gt;
-&lt;h3 id="头像"&gt;头像&lt;/h3&gt;
-&lt;p&gt;灵感来自于曾经很喜欢的像素游戏《克鲁赛德战记》（你可以理解为像素小人版消消乐promax），至2024年为止已运营9年，已停止更新。&lt;/p&gt;
+&lt;h3 id="技术栈"&gt;技术栈&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;开发工具&lt;/strong&gt;：nvim + lsp, vs-code, zeditor&lt;br&gt;
+&lt;strong&gt;网站开发&lt;/strong&gt;：typescript, vue, react, nuxt, next&lt;br&gt;
+&lt;strong&gt;后端开发&lt;/strong&gt;：springboot, nest.js, elysia.js, mysql, mongodb, redis&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一种异样的寂寞包裹着我，我举目青山，青山稻田凝望着我，凝视着我的灵魂，我战栗地面向他们，面向自己。时光在风中雾里消散，我想要呼喊，渴望哭泣，我希望你能感受到我所感受的万分之一。&lt;br&gt;
 我希望，你走向我，即使你也词穷语尽，一言不发。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;!-- [风清](https://wind.ink) / --&gt;
-&lt;p&gt;&lt;a href="https://sanlun.bike"&gt;三輪&lt;/a&gt; /
+&lt;p&gt;&lt;a href="https://wind.ink"&gt;风清&lt;/a&gt; /
+&lt;a href="https://sanlun.bike"&gt;三輪&lt;/a&gt; /
 &lt;a href="https://d-d.design/"&gt;孤斗&lt;/a&gt; /
 &lt;a href="https://zishu.me/"&gt;子舒&lt;/a&gt; /
 &lt;a href="https://taoshu.in/"&gt;涛叔&lt;/a&gt; /
@@ -822,7 +826,8 @@
 &lt;a href="https://www.juroku.net"&gt;致郁系&lt;/a&gt; /
 &lt;a href="https://2cat.net"&gt;貓魚&lt;/a&gt; /
 &lt;a href="https://blog.hanyu.me/"&gt;Yu&lt;/a&gt; /
-&lt;a href="https://icones.netlify.app/"&gt;icônes library&lt;/a&gt; /
+&lt;a href="https://amooos.com/"&gt;amooos&lt;/a&gt; /&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://icones.netlify.app/"&gt;icônes library&lt;/a&gt; /
 &lt;a href="https://vectorizer.ai/"&gt;Image Conversion&lt;/a&gt; /
 &lt;a href="https://www.magnumphotos.com/"&gt;Magnum Photos&lt;/a&gt; /
 &lt;a href="https://excalidraw.com/"&gt;Excalidraw&lt;/a&gt; /

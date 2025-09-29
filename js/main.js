@@ -1,4 +1,4 @@
 (() => {
   // <stdin>
-  console.log("%c\u{1F327} Rain%c https://github.com/rainto0322", "background:#6ab0e5;color:#fff;padding:5px;", "padding:5px;color:#6ab0e5;background:#fff;");
+  console.log("%c\u{1F327} Rain%c https://github.com/rainto0322", "background:#c4a7e7;color:#101010;padding:5px;", "padding:5px;color:#c4a7e7;background:#101010;");
 })();
