@@ -44,13 +44,28 @@ class Memo {
     const fragment = document.createDocumentFragment();
     for (const item of data) {
       let { text, img, date } = item
-      const memoItem = this.cr('div')
-      let image = ''
-      if (img.length >= 1) image = `<img src="https://raw.gitcode.com/rainto/Album/raw/main/daily/${img[0]}.png">`
-      memoItem.className = 'm-item'
-      const memoContent = `<div class="i-cont">${image}${text}</div><div class="i-meta"><time datetime="${date}">${this.T(date)}</time></div>`
-      memoItem.innerHTML = memoContent
-      fragment.appendChild(memoItem)
+
+      const memo_item = this.cr('div')
+      memo_item.className = 'm-item'
+
+      let memo_cont = this.cr('div')
+      memo_cont.className = 'i-cont'
+
+      const memo_date = this.cr('time')
+      memo_date.innerHTML = `<div class="i-meta"><time datetime="${date}">${this.T(date)}</time></div>`
+
+      const parser = new DOMParser();
+      const content = parser.parseFromString(text.replace(/\n/g, "<br>"), "text/html").body.innerHTML
+
+      if (img.length >= 1) {
+        memo_cont.innerHTML = `<img src="https://raw.gitcode.com/rainto/Album/raw/main/daily/${img[0]}.png">` + content
+      } else {
+        memo_cont.innerHTML = content
+      }
+
+      memo_item.appendChild(memo_cont)
+      memo_item.appendChild(memo_date)
+      fragment.appendChild(memo_item)
     }
 
     const more = this.$('#memo-more')
