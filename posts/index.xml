@@ -272,11 +272,11 @@
  &lt;/div&gt;
  &lt;div class="hl-wrap"&gt;
  &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;age&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;age&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;18&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 这是个啥？猜去吧！没用的，只有我才知道！
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;a&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;a&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol start="2"&gt;
@@ -296,10 +296,10 @@
  &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 400的数量是根据UX A/B测试结果进行计算的。
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// @查看: &amp;lt;详细解释的一个链接&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;callbackCode&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;callbackCode&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;cbc&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;cbc&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol start="3"&gt;
@@ -321,11 +321,11 @@
  &lt;div class="hl-wrap"&gt;
  &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 隐藏错误弹窗
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Ха - ха, большой идиот, я догадался, что ты скопируешь, чтобы найти переводчика.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol start="4"&gt;
@@ -602,7 +602,7 @@
  &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;Math&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;~~&lt;/span&gt;&lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// ~4.9 = -5
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt; &lt;span style="color:#908caa"&gt;|&lt;/span&gt; &lt;span style="color:#f6c177"&gt;0&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// 4 不推荐
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt; &lt;span style="color:#908caa"&gt;|&lt;/span&gt; &lt;span style="color:#f6c177"&gt;0&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// 4 不推荐
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  &lt;/div&gt;
 &lt;/div&gt;
@@ -723,11 +723,11 @@
  &lt;div class="hl-wrap"&gt;
  &lt;pre&gt;&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;||&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;||&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;){&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6e6a86"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt;&lt;span style="color:#908caa"&gt;([&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt;&lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;].&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;includes&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;)){&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6e6a86"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;&lt;/span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol start="12"&gt;

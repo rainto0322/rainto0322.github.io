@@ -365,8 +365,13 @@ footer {
   overflow: hidden;
 }
 
+#memo #m-more {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .view-box.grid-1 {
-  grid-template-columns: 1fr;
+  max-width: 300px;
+  grid-template-columns: 300px;
 }
 
 .view-box.grid-2,

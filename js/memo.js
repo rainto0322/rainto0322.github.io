@@ -44,7 +44,7 @@ window.Memo = {
             for (const img_path of img) {
                 const img_item = b.c('li', '')
 
-                const img = b.c('img')
+                const img = b.c('img', '')
                 img.src = `https://raw.gitcode.com/rainto/Album/raw/main/daily/${img_path}.png`
                 view_box.setAttribute('view-image', '')
 
