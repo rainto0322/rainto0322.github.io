@@ -95,6 +95,7 @@ a[aria-current*="page"] {
 
 main {
   min-height: 300px;
+  animation: fade .8s forwards alternate;
 }
 
 
@@ -388,4 +389,5 @@ footer {
   height: 100%;
   border-radius: 0;
   object-fit: cover;
+  animation: fade 1.2s forwards alternate;
 }

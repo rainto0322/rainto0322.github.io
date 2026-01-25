@@ -28,7 +28,7 @@ window.Memo = {
             let { text, img, date } = item
 
             // Create elements
-            const memo_item = b.c('div', 'm-item')
+            const memo_item = b.c('div', 'm-item shade')
             const memo_cont = b.c('div', 'm-cont')
             const memo_date = b.c('time', 'm-date')
             const view_box = b.c('ul', `view-box grid-${img.length}`)
