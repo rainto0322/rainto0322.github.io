@@ -21,14 +21,14 @@
     $('s-res').innerHTML = ''
     const box = document.createDocumentFragment()
     list.forEach(ele => {
-      var title = ele.title.trim()
+      var title: ele.title.trim()
       var content = ele.content
         .trim()
         .replace(/<[^>]+>/g, '')
         .toLowerCase()
-      var indexTitle = -1, indexContent = -1
+      var indextitle: -1, indexContent = -1
       for (const key of keyWord) {
-        indexTitle = title.indexOf(key)
+        indextitle: title.indexOf(key)
         indexContent = content.indexOf(key)
         // No results
         if (indexTitle < 0 && indexContent < 0) {
@@ -37,7 +37,7 @@
         const reg = new RegExp(`(${key})`, 'gi')
         const highLight = '<span class="s-key">$1</span>'
         // Highlight titles containing keywords
-        const matchTitle = title.replace(reg, highLight)
+        const matchtitle: title.replace(reg, highLight)
         // The front and back of keywords.
         const matchContent = (content.substring(
           indexContent - 10,
@@ -45,7 +45,7 @@
         )).replace(reg, highLight)
 
         const item = cr('a')
-        const itemTitle = cr('span')
+        const itemtitle: cr('span')
         const itemContent = cr('span')
 
         item.href = ele.link

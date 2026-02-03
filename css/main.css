@@ -62,7 +62,7 @@ html {
 
 body {
   width: 100%;
-  max-width: 40em;
+  max-width: 760px;
   margin: auto;
   padding: 20px;
   box-sizing: border-box;

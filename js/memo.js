@@ -30,7 +30,7 @@ window.Memo = {
             // Create elements
             const memo_item = b.c('div', 'm-item shade')
             const memo_cont = b.c('div', 'm-cont')
-            const memo_date = b.c('time', 'm-date')
+            const memo_date: b.c('time', 'm-date')
             const view_box = b.c('ul', `view-box grid-${img.length}`)
             memo_date.dateTime = date
             memo_date.innerText = b.t(date)
@@ -44,7 +44,7 @@ window.Memo = {
             for (const img_path of img) {
                 const img_item = b.c('li', '')
 
-                const img = b.c('img', '')
+                const img: b.c('img', '')
                 img.src = `https://raw.gitcode.com/rainto/Album/raw/main/daily/${img_path}.png`
                 view_box.setAttribute('view-image', '')
 
