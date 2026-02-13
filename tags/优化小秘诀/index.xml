@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>优化小秘诀 on 雨巷 🌧</title><link>/tags/%E4%BC%98%E5%8C%96%E5%B0%8F%E7%A7%98%E8%AF%80/</link><description>Recent content in 优化小秘诀 on 雨巷 🌧</description><generator>Hugo</generator><language>zh-Cn</language><lastBuildDate>Fri, 06 Oct 2023 22:09:00 -0700</lastBuildDate><atom:link href="/tags/%E4%BC%98%E5%8C%96%E5%B0%8F%E7%A7%98%E8%AF%80/index.xml" rel="self" type="application/rss+xml"/><item><title>屎山代码风格指南</title><link>/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link><pubDate>Fri, 06 Oct 2023 22:09:00 -0700</pubDate><guid>/posts/note/20231106%E5%B1%8E%E5%B1%B1%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid><description>&lt;p&gt;&lt;a href="https://github.com/trekhleb/state-of-the-art-shitcode"&gt;&lt;img src="https://img.shields.io/static/v1?label=State-of-the-art&amp;amp;message=Shitcode&amp;amp;color=7B5804" alt="State-of-the-art Shitcode"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✋ 以下不要尝试学习，&lt;code&gt;不要写&lt;/code&gt;！给出这些建议就是避免这样写，不听的话，下周就是你提桶跑路的日子（划重点）Good 👍🏻&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="好的代码风格-"&gt;好的代码风格 👍&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;良好的代码结构：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;有意义的变量和函数名&lt;/code&gt;，遵循命名规范，使代码易于理解。&lt;/li&gt;
+&lt;li&gt;组织代码，使用适当的文件和文件夹结构，保持模块化。&lt;/li&gt;
+&lt;li&gt;避免全局变量的滥用，&lt;code&gt;尽量使用局部作用域&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;单一职责原则：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;每个函数或模块应该只负责一个特定的功能。这样的设计使得代码更容易维护和扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DRY 原则（不要重复自己）：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;避免复制粘贴代码，尽量将重复的逻辑提取成函数、类或模块。
+使用函数封装通用功能，以便在整个应用程序中重复使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注释和文档：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;写&lt;code&gt;清晰&lt;/code&gt;、&lt;code&gt;有意义&lt;/code&gt;的注释，解释代码的目的和特殊考虑。&lt;/li&gt;
+&lt;li&gt;为 API、函数等提供&lt;code&gt;良好的文档&lt;/code&gt;，使其他开发者能够轻松理解和使用你的代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代码复审：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;进行代码复审是避免屎山代码的重要步骤。同事可以提供不同的视角和建议，有助于发现潜在的问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;测试驱动开发（TDD）：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;使用测试来确保代码的质量和稳定性。在编写代码之前先写测试，以确保代码的正确性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用设计模式：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;学习并应用设计模式，它们提供了一些通用的解决方案，有助于降低复杂性和提高代码的可维护性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;版本控制：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;版本控制&lt;/code&gt;系统（如 Git）来跟踪代码的变化，以便轻松地回滚到之前的版本，并且能够合理管理多人协作的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;性能优化和代码优化：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;注意&lt;code&gt;代码的性能&lt;/code&gt;，避免写出低效的代码。使用工具和技术进行性能分析和优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;学习和持续改进：&lt;code&gt;Bad!👎🏻&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;不断学习新的技术和最佳实践，关注前端领域的最新发展。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;定期检讨&lt;/code&gt;自己的代码，寻找优化的机会，并从他人的经验中吸取教训。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h3 id="以下是我精心准备的福利大礼包-good"&gt;以下是我精心准备的福利大礼包 &lt;code&gt;Good!👍🏻&lt;/code&gt;&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="通用jscsshtml系列"&gt;通用js,css,html系列&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;混淆方式命名变量&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-0" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;age&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 这是个啥？猜去吧！没用的，只有我才知道！
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;a&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="2"&gt;
+&lt;li&gt;不要注释！不要注释！不要注释！&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-1" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 400的数量是根据UX A/B测试结果进行计算的。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// @查看: &amp;lt;详细解释的一个链接&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;callbackCode&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;cbc&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;400&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="3"&gt;
+&lt;li&gt;非母语注释&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你手贱，确实想写注释，你已经违背了&lt;code&gt;规则2&lt;/code&gt;,在这种情况下，&lt;code&gt;规则3&lt;/code&gt;一定要遵守，写注释用非母语，提升别人看注释的门槛，例如：你的母语是中文，你写注释就用法语或者俄语。有人可能会问，我不会怎么办？善用翻译！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id="hl-2" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Bad 👎🏻（不要参考）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// 隐藏错误弹窗
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Good 👍🏻（谨记）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6e6a86"&gt;// Ха - ха, большой идиот, я догадался, что ты скопируешь, чтобы найти переводчика.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;togglePop&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="4"&gt;
+&lt;li&gt;尽可能把代码写成一行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把代码写在一行才显得更牛逼,别人写 20 行，你一行就搞定了！实力无需多言！&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on 雨巷 🌧</title><link>/tags/javascript/</link><description>Recent content in Javascript on 雨巷 🌧</description><generator>Hugo</generator><language>zh-Cn</language><lastBuildDate>Thu, 20 Jan 2022 22:09:00 -0700</lastBuildDate><atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Javascript简写技巧</title><link>/posts/note/20220120js%E7%AE%80%E5%86%99/</link><pubDate>Thu, 20 Jan 2022 22:09:00 -0700</pubDate><guid>/posts/note/20220120js%E7%AE%80%E5%86%99/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;分享下Javascript常用的简写技巧，写出更优雅的代码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;三元运算符&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-0" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;let&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;result&lt;/span&gt;&lt;span style="color:#908caa"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt; &lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;condition&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;result&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#31748f"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt; &lt;span style="color:#31748f"&gt;else&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;result&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#31748f"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;result&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;condition&lt;/span&gt; &lt;span style="color:#908caa"&gt;?&lt;/span&gt; &lt;span style="color:#31748f"&gt;true&lt;/span&gt; &lt;span style="color:#908caa"&gt;:&lt;/span&gt; &lt;span style="color:#31748f"&gt;false&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="2"&gt;
+&lt;li&gt;空值合并&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-1" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;!==&lt;/span&gt; &lt;span style="color:#31748f"&gt;null&lt;/span&gt; &lt;span style="color:#908caa"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;!==&lt;/span&gt; &lt;span style="color:#31748f"&gt;undefined&lt;/span&gt; &lt;span style="color:#908caa"&gt;?&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;:&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#39;default;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;??&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="3"&gt;
+&lt;li&gt;可选链操作符&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-2" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;street&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt; &lt;span style="color:#908caa"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;address&lt;/span&gt; &lt;span style="color:#908caa"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;address&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;street&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;street&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;user&lt;/span&gt;&lt;span style="color:#908caa"&gt;?&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;address&lt;/span&gt;&lt;span style="color:#908caa"&gt;?&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;street&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="4"&gt;
+&lt;li&gt;数组去重&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Set&lt;/code&gt; 是 ES6 引入的一种新的数据结构，它类似于数组，但是成员的值都是唯一的，没有重复的值。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id="hl-3" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;function&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;unique&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#31748f"&gt;return&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;filter&lt;/span&gt;&lt;span style="color:#908caa"&gt;((&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;item&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;index&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;indexOf&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;item&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;===&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#908caa"&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;unique&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#908caa"&gt;[...&lt;/span&gt;&lt;span style="color:#31748f"&gt;new&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;Set&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;)]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="5"&gt;
+&lt;li&gt;快速向下取整&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于位非操作会保留数字的符号位并将其他位取反，再执行一次位非操作就会回复原来的数值。（因为&lt;code&gt;位运算只处理整数部分&lt;/code&gt;）
+虽然在性能上可能略微优于使用Math.floor()，但不直观&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id="hl-4" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;Math&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;~~&lt;/span&gt;&lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// ~4.9 = -5
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;floor&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;4.9&lt;/span&gt; &lt;span style="color:#908caa"&gt;|&lt;/span&gt; &lt;span style="color:#f6c177"&gt;0&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// 4 不推荐
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="6"&gt;
+&lt;li&gt;合并对象&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-5" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;merged&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;Object&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;assign&lt;/span&gt;&lt;span style="color:#908caa"&gt;({},&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;obj1&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;obj2&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;merged&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt; &lt;span style="color:#908caa"&gt;...&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;obj1&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#908caa"&gt;...&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;obj2&lt;/span&gt; &lt;span style="color:#908caa"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="7"&gt;
+&lt;li&gt;短路求值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-6" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;condition&lt;/span&gt;&lt;span style="color:#908caa"&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;doSomething&lt;/span&gt;&lt;span style="color:#908caa"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;condition&lt;/span&gt; &lt;span style="color:#908caa"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;doSomething&lt;/span&gt;&lt;span style="color:#908caa"&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="8"&gt;
+&lt;li&gt;默认参数&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-7" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;function&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;greet&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;||&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#39;Guest&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ebbcba"&gt;console&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;log&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;greet&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#39;Guest&amp;#39;&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;console&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;log&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;name&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="9"&gt;
+&lt;li&gt;结构赋值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-8" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;first&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#f6c177"&gt;0&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;secound&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;first&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;secound&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;arr&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="10"&gt;
+&lt;li&gt;字符串转数字&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-9" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;num&lt;/span&gt;&lt;span style="color:#908caa"&gt;=&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;parseInt&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#f6c177"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;num&lt;/span&gt;&lt;span style="color:#908caa"&gt;=+&lt;/span&gt;&lt;span style="color:#f6c177"&gt;&amp;#39;456&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="11"&gt;
+&lt;li&gt;多重条件判断&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-10" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;||&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;||&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;===&lt;/span&gt;&lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6e6a86"&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;if&lt;/span&gt;&lt;span style="color:#908caa"&gt;([&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt;&lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;].&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;includes&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;&lt;span style="color:#908caa"&gt;)){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6e6a86"&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="12"&gt;
+&lt;li&gt;快速幂运算&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-11" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;Math&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;pow&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt; &lt;span style="color:#908caa"&gt;**&lt;/span&gt; &lt;span style="color:#f6c177"&gt;3&lt;/span&gt; &lt;span style="color:#6e6a86"&gt;// 8
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="13"&gt;
+&lt;li&gt;数组映射&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-12" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;numbers&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#f6c177"&gt;1&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#f6c177"&gt;3&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;doubled&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;numbers&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;mao&lt;/span&gt;&lt;span style="color:#908caa"&gt;((&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;num&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#31748f"&gt;return&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;num&lt;/span&gt; &lt;span style="color:#908caa"&gt;*&lt;/span&gt; &lt;span style="color:#f6c177"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;doubled&lt;/span&gt;&lt;span style="color:#908caa"&gt;=&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;numbers&lt;/span&gt;&lt;span style="color:#908caa"&gt;.&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;map&lt;/span&gt;&lt;span style="color:#908caa"&gt;(&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;num&lt;/span&gt;&lt;span style="color:#908caa"&gt;=&amp;gt;&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;num&lt;/span&gt;&lt;span style="color:#908caa"&gt;*&lt;/span&gt;&lt;span style="color:#f6c177"&gt;2&lt;/span&gt;&lt;span style="color:#908caa"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="14"&gt;
+&lt;li&gt;交换变量值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-13" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;let&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;temp&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;a&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;a&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;b&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;temp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;a&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;b&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;b&lt;/span&gt;&lt;span style="color:#908caa"&gt;,&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;a&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol start="15"&gt;
+&lt;li&gt;动态对象属性&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id="hl-14" class="hl"&gt;
+	&lt;div class="hl-control"&gt;
+		&lt;div class="wrap" onclick="code_wrap(this)"&gt;&lt;/div&gt;
+		&lt;div class="copy" onclick="code_copy(this)"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-meta"&gt;
+		&lt;span class="type"&gt;js&lt;/span&gt;
+		&lt;span class="file"&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	
+	&lt;div class="hl-wrap"&gt;
+		&lt;pre&gt;
+			&lt;code class="code"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;obj&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ebbcba"&gt;obj&lt;/span&gt;&lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;dynamic&lt;/span&gt; &lt;span style="color:#908caa"&gt;+&lt;/span&gt; &lt;span style="color:#f6c177"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#31748f"&gt;const&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;obj&lt;/span&gt; &lt;span style="color:#908caa"&gt;=&lt;/span&gt; &lt;span style="color:#908caa"&gt;{&lt;/span&gt; &lt;span style="color:#908caa"&gt;[&lt;/span&gt;&lt;span style="color:#f6c177"&gt;`&lt;/span&gt;&lt;span style="color:#f6c177"&gt;${&lt;/span&gt;&lt;span style="color:#ebbcba"&gt;dynamic&lt;/span&gt;&lt;span style="color:#f6c177"&gt;}&lt;/span&gt;&lt;span style="color:#f6c177"&gt;name`&lt;/span&gt;&lt;span style="color:#908caa"&gt;]&lt;/span&gt;&lt;span style="color:#908caa"&gt;:&lt;/span&gt; &lt;span style="color:#ebbcba"&gt;value&lt;/span&gt; &lt;span style="color:#908caa"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;
+		&lt;/pre&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

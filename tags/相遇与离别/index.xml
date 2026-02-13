@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>相遇与离别 on 雨巷 🌧</title><link>/tags/%E7%9B%B8%E9%81%87%E4%B8%8E%E7%A6%BB%E5%88%AB/</link><description>Recent content in 相遇与离别 on 雨巷 🌧</description><generator>Hugo</generator><language>zh-Cn</language><lastBuildDate>Sun, 28 Sep 2025 08:00:00 -0700</lastBuildDate><atom:link href="/tags/%E7%9B%B8%E9%81%87%E4%B8%8E%E7%A6%BB%E5%88%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>我与O记的前世今生</title><link>/posts/member/20250928%E6%88%91%E4%B8%8Eo%E8%AE%B0%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</link><pubDate>Sun, 28 Sep 2025 08:00:00 -0700</pubDate><guid>/posts/member/20250928%E6%88%91%E4%B8%8Eo%E8%AE%B0%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</guid><description>&lt;h1 id="命运の邂逅-9月11日-1210"&gt;命运の邂逅 9月11日 12:10&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每年总会捡到几次小猫，他们随机刷新在小区草丛、消防栓里、车轴底下、街角纸箱。这些毛茸茸的小东西总是刷新在各种意想不到的角落。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+ 
+ 
+ 
+
+ &lt;div class="product"&gt;
+ &lt;div class="product-media"&gt;
+ 
+ &lt;img alt="../img/往我旁边钻的o记.jpg" src="../img/%e5%be%80%e6%88%91%e6%97%81%e8%be%b9%e9%92%bb%e7%9a%84o%e8%ae%b0.jpg"&gt;
+ 
+ &lt;/div&gt;
+
+ &lt;div class="product-content"&gt;
+ 
+ &lt;p class="product-title"&gt;往我旁边钻的o记&lt;/p&gt;
+ 
+ &lt;p&gt;这是今年的第四次，我眼看着一只奶牛猫从路边的花圃跳出，然后被疾驰过的车轮压进二维世界。当下惋惜之余只能快步走过了，谁曾想走到花圃旁边听到了喵喵叫。然后就发现了这小鼻嘎，并带回了家。自从white的事发生后，我很长一段时间都不敢再养猫了，但是她一直在我脚边蹭唉，手段十分了得，罢了罢了。&lt;/p&gt;
+&lt;p&gt;以上，集思广益，取名O记，我也是荣升督察了。&lt;/p&gt;
+
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;style&gt;
+ .product {
+ display: grid;
+ grid-template-columns: 250px 1fr;
+ gap: 10px;
+
+ &amp; img {
+ min-width: 100%;
+ object-fit: contain;
+ }
+
+ &amp; .product-title {
+ color: var(--muted);
+ }
+
+ &amp; .product-title::before {
+ content: "← ";
+ font-weight: bolder;
+ }
+
+ &amp; .product-content&gt;p {
+ margin-top: 0;
+ }
+ }
+
+ @media screen and (max-width:576px) {
+ .product {
+ grid-template-columns: 150px 1fr;
+ align-items: center;
+ }
+ }
+
+ @media screen and (max-width: 460px) {
+ .product {
+ grid-template-columns: 1fr;
+
+ &amp; .product-title::before {
+ content: "↑ ";
+ }
+ }
+ }
+ &lt;/style&gt;
+&lt;h1 id="学会定点-9月15日-2002"&gt;学会定点 9月15日 20:02&lt;/h1&gt;
+&lt;p&gt;由于O记刚来我家就牛逼哄哄地往我家床上来了一泡特制小饮料（心疼我的床垫）。当下急得试徒用人类的语言和她沟通，但望着她一脸无辜的样子，我知道我败了。接着的几天，只要看到她想躲起来，或是有蹲下想o屎的迹象，我就来上一脚并带她飞奔到厕所。终于功夫不负有心人，9月15日晚八点零二分，回到家的我看着蹲厕里的一坨4cm长的巨物发出了尖锐爆鸣，立马把O记高高举起，跟狮子王里的场面就差bgm和皮套了。&lt;/p&gt;</description></item></channel></rss>
